@@ -1,6 +1,6 @@
 [build]
 builder = "NIXPACKS"
-buildCommand = "cd app/frontend && rm -rf package-lock.json && npm install vite@5.4.11 @vitejs/plugin-react@4.3.4 && npm install && npm run build && cd ../backend && rm -rf package-lock.json && npm install"
+buildCommand = "cd app/frontend && rm -rf package-lock.json && npm install vite@5.4.11 @vitejs/plugin-react@4.3.4 && npm install && npm run build && cd ../backend && npm install"
 
 [deploy]
 startCommand = "cd app/backend && node server.js"
