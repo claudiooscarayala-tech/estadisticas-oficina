@@ -303,7 +303,7 @@ app.post("/api/deuda/upload", upload.single("file"), async (req, res) => {
         text: `Estimado ${producerName}:\n\nEn archivo adjunto enviamos listado de cuotas pendientes de cobro de tu cartera en ${company}, solicitamos analizar y realizar la gestión de cobranzas correspondiente. Agradecemos tu gestión.`,
         attachments: [
           {
-            filename: \`Deuda_\${producerName.replace(/[^a-zA-Z0-9_]/g, '_')}.xlsx\`,
+            filename: `Deuda_${producerName.replace(/[^a-zA-Z0-9_]/g, '_')}.xlsx`,
             content: buffer
           }
         ]
